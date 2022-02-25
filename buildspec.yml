@@ -10,13 +10,13 @@ phases:
   pre_build:
     commands:
        - pip install -r requirements.txt
-  # build:
+  build:
     commands:
-       - pytest app/tests/
+       - pytest
        - ls -lart
   post_build:
     commands:
-       - pytest --cov=app/core app/tests
+       - ""
 artifacts:
   files:
      - "**/*"
